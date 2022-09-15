@@ -71,6 +71,22 @@
                 <td>5 hours</td>
             </tr>
         </table>
-
+        <hr>
+        <h4>code fencing</h4>
+       <blockquote>Preload lets you tell the browser about critical resources 
+        that you want to load as soon as possible, before they are discovered in HTML. 
+        This is especially useful for resources that are not easily discoverable, 
+        such as fonts included in stylesheets, background images, or resources loaded from a script.
+       </blockquote>
+       <a href ="https://web.dev/preload-responsive-images/">Link source</a>
+       <pre>
+        $.preloadImages = function() {
+            for (var i = 0; i < arguments.length; i++) {
+              $("<img />").attr("src", arguments[i]);
+            }
+          }
+          
+          $.preloadImages("hoverimage1.jpg","hoverimage2.jpg");
+       </pre>
 </body>
 </html>
